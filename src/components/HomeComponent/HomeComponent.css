@@ -1,0 +1,66 @@
+.homeheader .header{
+    padding-top: 170px;
+    padding-bottom: 200px;
+    background: linear-gradient(180deg, rgba(52,25,94,.4) 0%, rgba(52,25,94,.4)   0%), url('../../assets/img/finance1.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.homeheader .header .btn-start{
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px 35px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ff523e;
+}
+
+.homeheader .header .paragraph{
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
+.homemain .our-goal{
+    background: rgb(245, 241, 241);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.homemain .our-goal .heading-one{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: 	#ff523e
+}
+.homemain .we-offer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.homemain .we-offer .heading-one{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: 	#613b83
+}
+.homemain .we-offer .heading-two{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 100px;
+    color: 	#ff523e
+}
+
+.homemain .we-offer .paragraph{
+    font-size: 16px;
+    font-weight: 500;
+    color: #613b83
+}
+
+.we-offer .row{
+    margin-bottom: 100px;
+}
+
