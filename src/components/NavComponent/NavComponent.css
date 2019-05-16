@@ -4,6 +4,9 @@
     padding-bottom: 15px;
 }
 
+.white{
+    color: white;
+}
 .navcomponent .nav-link{
     color: white;
     margin-left: 10px;

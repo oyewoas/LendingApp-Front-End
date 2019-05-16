@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './NavComponent.css';
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHamburger, faBars } from '@fortawesome/free-solid-svg-icons';
+library.add(faBars);
 class NavComponent extends Component {
     render() {
       return (
@@ -8,7 +11,7 @@ class NavComponent extends Component {
           <nav className="navbar navbar-expand-lg">
             <a className="navbar-brand" href="#">LendMoney.App</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="white"><FontAwesomeIcon icon="bars"/></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto text-center">
