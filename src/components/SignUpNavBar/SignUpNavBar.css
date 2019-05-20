@@ -1,0 +1,32 @@
+.navcomponent .navbar{
+    background-image: linear-gradient(to right, #ff523e , #613b83);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.white{
+    color: white;
+}
+.navcomponent .nav-link{
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.navcomponent .navbar-brand{
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.navcomponent .btn-start{
+    background-color: #ff523e;
+    text-align: center;
+    color: white;
+}
+
+.navcomponent .btn-start .text {
+    padding-left: 20px;
+    padding-right: 20px;
+}

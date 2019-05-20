@@ -1,5 +1,6 @@
  import React, {Component} from 'react';
 import NavComponent from '../NavComponent/NavComponent';
+import { Link } from 'react-router-dom';
 import './HomeComponent.css';
 import financesvg from '../../assets/svg/finance1.svg';
 import loansvg from '../../assets/svg/loans.svg';
@@ -22,7 +23,7 @@ import FooterComponent from '../FooterComponet/FooterComponent';
                       We provide loans to individuals and small businesses.
                     </p>
                     <div className="">
-                      <a className="mt-4 btn-start shadow-lg" href="">Start Now</a>
+                      <Link className="mt-4 btn-start shadow-lg" to="/signup">Start Now</Link>
 
                     </div>
                   </div>

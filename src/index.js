@@ -9,6 +9,12 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './assets/styles/normalize.css';
 import './index.css';
+import SignUpPage from './components/SignUpPage/SignUpPage';
+import LogInPage from './components/LogInPage/LogInPage';
+import NotFound from './components/NotFound/NotFound';
+import DashBoard from './components/DashBoard/DashBoard';
+
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -17,8 +23,10 @@ const routing = (
       <div>
         <Switch>
           <Route exact path="/" component={App} />
-          {/* <Route path="/signup" component={SignUpPage} /> */}
-          {/* <Route component={NotFound} /> */}
+          <Route path="/signup" component={SignUpPage} />
+          <Route path="/signin" component={LogInPage} />
+          <Route path="/dashboard" component={DashBoard} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>
