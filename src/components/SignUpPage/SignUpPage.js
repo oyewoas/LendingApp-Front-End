@@ -98,7 +98,6 @@ class SignUpPage extends Component {
             lastName: '',
             password: '',
             confirmpassword: '',
-						age: '',
 						dob: '',
 						validation: this.validator.valid(),
 						successmessage: '',
@@ -136,9 +135,11 @@ class SignUpPage extends Component {
         if (validation.isValid) {
 					// handle actual form submission here
 					try{
-						const res = await axios.post('${env.api}customer/SignUp', this.state);
+						const res = await axios.post(`${env.api}customer/SignUp`, this.state);
 						const token = res.data.data.token;
-
+            this.setState({
+              successmessage: 'Registered successfully', errormessage: ''
+            });
 						localStorage.setItem('token', token);
 
 						this.props.history.push('/dashboard');
@@ -148,9 +149,7 @@ class SignUpPage extends Component {
 					} catch(err){
 						console.log('An Error Occured', err.response);
 					}
-					this.setState({
-						successmessage: 'Registered successfully', errormessage: ''
-					});
+					
 					
 
 					
