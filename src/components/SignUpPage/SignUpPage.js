@@ -136,27 +136,32 @@ class SignUpPage extends Component {
 					// handle actual form submission here
 					try{
 						const res = await axios.post(`${env.api}customer/SignUp`, this.state);
-						const token = res.data.data.token;
-            this.setState({
-              successmessage: 'Registered successfully', errormessage: ''
-            });
+						const token = res.result.data.token;
+            res.result.data.message = 'Account Successfully Created'
 						localStorage.setItem('token', token);
 
-						this.props.history.push('/dashboard');
-						console.log(res);
+						this.props.history.push('/verifymail');
+            console.log(res);
+            this.setState({
+              successmessage: res.result.data.message
+            });
 						
 
 					} catch(err){
-						console.log('An Error Occured', err.response);
+            this.setState({
+               errormessage: err.result.data.message
+            });
+						console.log('An Error Occured', err.result.data.message);
 					}
 					
 					
 
 					
-        } else {
-					this.setState({
-						errormessage: 'Cannot Create User Make sure all fields are correctly filled', successmessage: ''
-					});
+        } 
+        else {
+					// this.setState({
+					// 	errormessage: 'Cannot Create User Make sure all fields are correctly filled', successmessage: ''
+					// });
 					// alert('Cannot Create User Make sure all fields are correctly filled')
 				}
       };

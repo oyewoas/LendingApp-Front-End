@@ -17,6 +17,7 @@ import DashBoard from './components/DashBoard/DashBoard';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import EmailVerificaiton from './components/EmailVerification/EmailVerification';
 
 const routing = (
     <Router>
@@ -26,6 +27,8 @@ const routing = (
           <Route path="/signup" component={SignUpPage} />
           <Route path="/signin" component={LogInPage} />
           <Route path="/dashboard" component={DashBoard} />
+          <Route path="/verifymail" component={EmailVerificaiton} />
+
           <Route component={NotFound} />
         </Switch>
       </div>

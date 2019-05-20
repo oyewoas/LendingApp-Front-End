@@ -1,0 +1,28 @@
+.email-header{
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px
+}
+
+.email-heading{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 44px;
+letter-spacing: -1px;
+padding-top: 20px;
+padding-bottom: 20px;
+color: #22262B;
+}
+
+.email-text{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #4A5158;
+
+}
