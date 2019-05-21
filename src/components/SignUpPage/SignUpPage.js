@@ -139,10 +139,6 @@ class SignUpPage extends Component {
         
 
 					} catch(err){
-            this.setState({
-              
-               errormessage: err.response.data.message,
-            });
 						notify.show(err.response.data.message, "warning", 5000);
 					}
         } 
