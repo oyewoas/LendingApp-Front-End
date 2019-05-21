@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import message from '../../assets/img/message.svg'
 import './EmailVerification.css'
+import Notifications, {notify} from 'react-notify-toast';
 
 class EmailVerificaiton extends Component{
+
+    componentDidMount(){
+        notify.show('Your Account Was Successfully Created', "success", 5000);
+    }
 
     render(){
         return(
             <div>
-
+                <Notifications />
+                
                 <div className="container-fluid">
                     <header className="email-header">
                         <div className="container">

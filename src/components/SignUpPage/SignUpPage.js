@@ -134,15 +134,9 @@ class SignUpPage extends Component {
         if (validation.isValid) {
 					// handle actual form submission here
 					try{
-						const res = await axios.post(`${env.api}customer/SignUp`, this.state)
-            res.data.message = "Account Successfully Created";
-            
+						const res = await axios.post(`${env.api}customer/SignUp`, this.state) 
 						this.props.history.push('/verifymail');
-            console.log(res);
-            this.setState({
-              successmessage: res.data.message,
-            });
-						
+        
 
 					} catch(err){
             this.setState({
