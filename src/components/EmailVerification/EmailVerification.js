@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import BlankNavBar from '../BlankNavBar/BlankNavBar'
 import message from '../../assets/img/message.svg'
 import './EmailVerification.css'
 
@@ -8,7 +7,6 @@ class EmailVerificaiton extends Component{
     render(){
         return(
             <div>
-                <BlankNavBar/>
 
                 <div className="container-fluid">
                     <header className="email-header">

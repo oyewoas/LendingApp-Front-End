@@ -6,6 +6,9 @@ import './SignUpPage.css';
 import axios from 'axios';
 import env from '../../../src/env';
 import FooterComponent from '../FooterComponet/FooterComponent';
+import Notifications, {notify} from 'react-notify-toast';
+import { toast } from "react-toastify";
+
 
 
 class SignUpPage extends Component {
@@ -124,10 +127,6 @@ class SignUpPage extends Component {
 
     handleFormSubmit = async(event) => {
         event.preventDefault();
-				const refreshPage = (timeoutPeriod) => {
-					let refresh = "location.reload(true)";
-					setTimeout( refresh ,timeoutPeriod);
-			  }
         const validation = this.validator.validate(this.state);
         this.setState({ validation });
         this.submitted = true;
@@ -135,35 +134,24 @@ class SignUpPage extends Component {
         if (validation.isValid) {
 					// handle actual form submission here
 					try{
-						const res = await axios.post(`${env.api}customer/SignUp`, this.state);
-						const token = res.result.data.token;
-            res.result.data.message = 'Account Successfully Created'
-						localStorage.setItem('token', token);
-
+						const res = await axios.post(`${env.api}customer/SignUp`, this.state)
+            res.data.message = "Account Successfully Created";
+            
 						this.props.history.push('/verifymail');
             console.log(res);
             this.setState({
-              successmessage: res.result.data.message
+              successmessage: res.data.message,
             });
 						
 
 					} catch(err){
             this.setState({
-               errormessage: err.result.data.message
+              
+               errormessage: err.response.data.message,
             });
-						console.log('An Error Occured', err.result.data.message);
+						notify.show(err.response.data.message, "warning", 5000);
 					}
-					
-					
-
-					
         } 
-        else {
-					// this.setState({
-					// 	errormessage: 'Cannot Create User Make sure all fields are correctly filled', successmessage: ''
-					// });
-					// alert('Cannot Create User Make sure all fields are correctly filled')
-				}
       };
 		
 			componentDidMount(){
@@ -178,6 +166,7 @@ class SignUpPage extends Component {
                       this.state.validation; 
         return(
             <div>
+                <Notifications />
                 <SignUpNavBar/>
                 <div className="container-fluid">
                     <div className="row">
